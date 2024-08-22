@@ -24,7 +24,7 @@ main = do
   let filename = head args
   input <- TI.readFile filename
   let summary = (countText . getCounts) input
-  TI.appendFile "stats.dat"
+  TI.appendFile "qtats.dat"
                 (mconcat [(T.pack filename),
                  " ", summary, "\n"])
   TI.putStrLn
